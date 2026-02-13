@@ -1,0 +1,731 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>3D Designs</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="27eb731e-7a39-807b-a53e-deb4d70c03bb" class="page sans"><header><h1 class="page-title" dir="auto">3D Designs</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="2b7b731e-7a39-80d2-99f4-f5c35c5e8f70" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2f6b731e-7a39-80e6-9e1e-c170ca377a8c" class="">Keychain Design</h2></div><div style="display:contents" dir="auto"><p id="2e8b731e-7a39-80a4-8d71-c92e16d08fc2" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-809e-b1bd-e30ebd5ab3af" class="numbered-list" start="1"><li>I have known Onshape since i am in the 3D class so there Is not anything I have learned.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-8025-a06b-f9ca7d14552b" class="numbered-list" start="2"><li>I started a new document and then created 2 sketches in shapes of keychain.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-8005-8165-f6cfb778f078" class="numbered-list" start="3"><li>Then I picked the text tool and put my name on there.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-8073-8d98-e4c969af7e7f" class="numbered-list" start="4"><li>Then I created the chain part a circle by sketch.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-8076-afce-c703d8830aca" class="numbered-list" start="5"><li>I created a smaller circle and removed it while extraditing it.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-8018-aaa9-f6e31f094d55" class="numbered-list" start="6"><li>Now my 3D keychain with my name on it was ready.</li></ol></div><div style="display:contents" dir="auto"><p id="2b6b731e-7a39-8040-93a4-fd3a9feefe1e" class=""><a href="https://cad.onshape.com/documents/8e78df34a7bba4d017917243/w/f6c0631aacb1590b4fa18141/e/84125dbe26bf61cc6d5957c8?renderMode=0&amp;uiState=69256995fa303007aed8f567">Keychain</a> </p></div><div style="display:contents" dir="ltr"><figure id="2b6b731e-7a39-8084-9152-ddd61c9de063" class="image" style="text-align:left"><a href="3D%20Designs/Screenshot_2025-11-25_at_11.29.02.png"><img style="width:336px" src="3D%20Designs/Screenshot_2025-11-25_at_11.29.02.png"/></a><figcaption><em><strong>ScreenShot on Onshape</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><p id="2f6b731e-7a39-80f2-8434-dcfe19d1fae7" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2b7b731e-7a39-802c-9b08-c2c985bdab24" class="">The Bird Feeder Project:</h2></div><div style="display:contents" dir="auto"><p id="2b7b731e-7a39-808c-9ed3-f759c958c75d" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-804b-8145-c1c0bf7710db" class="numbered-list" start="1"><li>Today I was given the task of creating a 3D bird feeder on onshape.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-80bb-b4e0-fb02e3705dbf" class="numbered-list" start="2"><li>I opened up Onshape signed in and pressed create then new document.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-80d1-8c70-c2fe1fef240c" class="numbered-list" start="3"><li>After doing that I started creating the sketch parts of the bird feeder.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-80a0-9de9-c609d248b36d" class="numbered-list" start="4"><li>I modified the width and the height to the wanted numbers.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-8034-bc7b-df0f7017483b" class="numbered-list" start="5"><li>I converted the sketches which are 2D to 3D.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-80d8-8afe-e271b45ebf6f" class="numbered-list" start="6"><li>I checked the width and height just incase to see if I have made any mistake and if they were on the preferred cm’s.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-8081-b9ad-d63cbd5a82e0" class="numbered-list" start="7"><li>To note ı did this before the digital fabrication lessons since I was given permission to add the project I did in 3D class because it was the same project even better and more challenging.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-8053-9944-f6d4209c7a69" class="numbered-list" start="8"><li>I know how to convert to 3D, removing items or adding them together or modifying depth and a lot more.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-8099-98be-cec953df6382" class="numbered-list" start="9"><li>I didn&#x27;t really learn any new stuff since we are using Onshape which i am good at because of 3D lessons I have every week.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-801e-aa6b-e3e5dacc9bd6" class="numbered-list" start="10"><li>I only learned how to download a design with the preferred format to put it here on notion.</li></ol></div><div style="display:contents" dir="auto"><p id="2b7b731e-7a39-80bc-8dd2-ca636efa7fc8" class=""> </p></div><div style="display:contents" dir="ltr"><figure id="2b7b731e-7a39-803f-acb2-fc9936037784" class="image" style="text-align:left"><a href="3D%20Designs/Screenshot_2025-11-26_at_14.34.54.png"><img style="width:288px" src="3D%20Designs/Screenshot_2025-11-26_at_14.34.54.png"/></a><figcaption><em><strong>ScreenShot on Onshape</strong></em></figcaption></figure></div><div style="display:contents" dir="ltr"><figure id="2b7b731e-7a39-8079-bc87-fee85f74185b"><div class="source"><a href="3D%20Designs/Part_Studio_1.3mf">Bird Feeder Project</a></div></figure></div><div style="display:contents" dir="auto"><p id="2b7b731e-7a39-80da-89a7-c978d592c219" class="">This is the project file downloaded in the preferred format.</p></div><div style="display:contents" dir="auto"><p id="2b7b731e-7a39-808a-8737-f1dbf7e9e335" class="">To download a design you constructed on Onshape you need to use the bar on the bottom right click and press export.</p></div><div style="display:contents" dir="auto"><p id="2b7b731e-7a39-8081-84af-fe32e57d53dc" class="">Then you need to pick the format you want the file to be in and you&#x27;re done.</p></div><div style="display:contents" dir="auto"><p id="2b7b731e-7a39-8022-a0d8-d78f97b85d5c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2b7b731e-7a39-8081-8b0c-f269a26cba5f" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2b7b731e-7a39-809b-939a-fe1cfe56d0a9" class="">Cake Project:</h2></div><div style="display:contents" dir="auto"><p id="2b9b731e-7a39-8096-a134-ed1cab306483" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2b7b731e-7a39-8044-a83f-e6dd70b8651d" class="numbered-list" start="1"><li>I watched the video on classroom and started designing the product.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b9b731e-7a39-8083-a487-c6613442aefe" class="numbered-list" start="2"><li>I couldn&#x27;t finish it in the design fabrication lesson so I continued it in 3D lesson today.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b9b731e-7a39-808c-b9ec-da979ee2a909" class="numbered-list" start="3"><li>I used various of new shapes that I haven&#x27;t tried before and learned how those shapes Are modified.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b9b731e-7a39-8052-a781-d30663a6c794" class="numbered-list" start="4"><li>I used a lot of new tools, by tools I mean stuff like transform to face or fillet or move to or material.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b9b731e-7a39-80be-adad-f4f17a24df27" class="numbered-list" start="5"><li>It took a long time because of all the new tools I have learned and also it had many details that had to be made 1 by 1.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b9b731e-7a39-80dc-ba5d-eff856e16a52" class="numbered-list" start="6"><li>To summarize I had a lot of help, learned a lot of new tools and shapes usages and it took a long time because of all the details.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b9b731e-7a39-80c1-a869-eb8a6b176d9a" class="numbered-list" start="7"><li>I also learned by myself while I was experimenting how to change the color of the faces of the designs.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b9b731e-7a39-8006-b09b-dc17b60dc449" class="numbered-list" start="8"><li>Lastly while I was designing the bird feeder I have learned how to download with a specific type (the preferred one in classroom .3mf) so I did that and put it up on notion.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b9b731e-7a39-80bb-b1b3-d1590308f375" class="numbered-list" start="9"><li>I have learned a lot on Onshape and I am going to teach it in the coding-summit at Hisar School.</li></ol></div><div style="display:contents" dir="ltr"><figure id="2b9b731e-7a39-8020-9ed8-f68f65b68f2f"><div class="source"><a href="3D%20Designs/Part_Studio_1-3.3mf">Cake Project</a></div></figure></div><div style="display:contents" dir="ltr"><figure id="2b9b731e-7a39-80eb-b64b-d0ffd4320f8d" class="image" style="text-align:left"><a href="3D%20Designs/Screenshot_2025-11-28_at_11.58.47.png"><img style="width:288px" src="3D%20Designs/Screenshot_2025-11-28_at_11.58.47.png"/></a><figcaption><em><strong>ScreenShot On Onshape</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><p id="2f6b731e-7a39-8078-934e-d1655b724f9f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2f6b731e-7a39-802b-8ed2-c6755721d297" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2bdb731e-7a39-809a-ae0c-e5f3de47f795" class="">16 Faced Dice Project:</h2></div><div style="display:contents" dir="auto"><p id="305b731e-7a39-803e-985d-db84b9808f67" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2bdb731e-7a39-802a-9220-d2f672607f13" class="numbered-list" start="1"><li>I watched the video</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2bdb731e-7a39-808e-bf09-f329185315ae" class="numbered-list" start="2"><li>While making this design I learned tools like construct and plane that was new.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2bdb731e-7a39-8034-b4c2-fc7fcc9e37ca" class="numbered-list" start="3"><li>I had known mirror before before but construct helps you design more detailed and easier. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2bdb731e-7a39-8029-a4f4-c4857b2202db" class="numbered-list" start="4"><li>İn the other hand plane helps you make new designing sets, its like creating a new floor for designing.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2bdb731e-7a39-8070-8f38-d1c7a4f9b2ac" class="numbered-list" start="5"><li>I have also learned how to download new tools from the public market while downloading the 3D line tool, I noticed the tools from the market could not be perfect since the 3D line tool didn&#x27;t have hide option.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2bdb731e-7a39-8066-a3b5-e55fd79fef92" class="numbered-list" start="6"><li>I also learned how to use circular shape creator which makes the surface that it was put onto symmetrical. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2bdb731e-7a39-8089-b3fa-d9c09a0c1ab6" class="numbered-list" start="7"><li>Then I downloaded it with the .3mf format and took screenshot.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2bdb731e-7a39-80ea-a6cd-d06ebe4e6edd" class="numbered-list" start="8"><li>I had learned how to download before which is from export button.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2bdb731e-7a39-80da-910d-df6ae9c1d039" class="numbered-list" start="9"><li>I had learned a lot with this project, new tools, how to get other tools and a lot more.</li></ol></div><div style="display:contents" dir="auto"><p id="2bdb731e-7a39-80fc-93a7-ed957cf5ce10" class=""> </p></div><div style="display:contents" dir="ltr"><figure id="2bdb731e-7a39-8049-b91c-db8293de6952" class="image" style="text-align:left"><a href="3D%20Designs/Screenshot_2025-12-02_at_14.03.18.png"><img style="width:288px" src="3D%20Designs/Screenshot_2025-12-02_at_14.03.18.png"/></a><figcaption>ScreenShot On Onshape</figcaption></figure></div><div style="display:contents" dir="ltr"><figure id="2bdb731e-7a39-80a6-85c6-fadeb2a80606"><div class="source"><a href="3D%20Designs/Part_Studio_1-4.3mf">16 Faced Dice</a></div></figure></div><div style="display:contents" dir="auto"><p id="2ceb731e-7a39-8077-b550-cf54dc8500be" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2ceb731e-7a39-8075-afd5-de6a9d6d2093" class=""><strong>Elephant Project:</strong></h2></div><div style="display:contents" dir="auto"><p id="305b731e-7a39-80af-92dd-c5f56d999ddd" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2ceb731e-7a39-8031-af39-ed879c09f7e0" class="numbered-list" start="1"><li>I opened the given document.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2ceb731e-7a39-809e-bf67-eac91e621c8f" class="numbered-list" start="2"><li>I created a copy of the given document so I could see the design better.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2ceb731e-7a39-8075-b63b-f798db7a1b8f" class="numbered-list" start="3"><li>By looking at the document while doing my design I could check every distance and every radius or every constraint. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2ceb731e-7a39-8062-abe2-e6d79fef6dfa" class="numbered-list" start="4"><li>By looking at the constraint there was no way I couldn&#x27;t do the same design.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2ceb731e-7a39-8066-8828-e871b2406933" class="numbered-list" start="5"><li>I learned how to use the helix tool while doing this design.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2ceb731e-7a39-8031-bc8a-e9eef4fb4452" class="numbered-list" start="6"><li>I finished the design and then downloaded the 3mp version.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2ceb731e-7a39-8084-8416-e09f7d503d0a" class="numbered-list" start="7"><li>This project taught me how to use the helix tool only because I knew all of the other tools already. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2ceb731e-7a39-80c3-81c6-cdc5be66aa60" class="numbered-list" start="8"><li>By doing this project my efficiency improved on Onshape and I became faster while using it.<div style="display:contents" dir="ltr"><figure id="2ceb731e-7a39-805e-a53e-c60bfd7e3e29"><div class="source"><a href="3D%20Designs/Part_Studio_1_(4).3mf">Elephant Project</a></div></figure></div></li></ol></div><div style="display:contents" dir="ltr"><figure id="2ceb731e-7a39-8051-8e7d-ebd736655ed7" class="image" style="text-align:left"><a href="3D%20Designs/Screenshot_2025-12-19_at_18.58.11.png"><img style="width:384px" src="3D%20Designs/Screenshot_2025-12-19_at_18.58.11.png"/></a><figcaption><em><strong>ScreenShot on Onshape</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><p id="2ceb731e-7a39-8018-a2ff-c4fff1b99f52" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2e8b731e-7a39-8078-92de-f191ff64248d" class="">Variable <strong>Dimensioning</strong></h2></div><div style="display:contents" dir="auto"><p id="305b731e-7a39-80f9-945c-dc14550e30b9" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-80ea-8d1a-e54ff6bea607" class="numbered-list" start="1"><li>I opened The classroom and saw that we needed to learn variables.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8051-a479-d29af1b79207" class="numbered-list" start="2"><li>I opened youtube and searched how do variables work on Onshape.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-801b-a354-ca130bc70e6f" class="numbered-list" start="3"><li>I watched the first minute of the video and learned that variables are just letters that were given a number and a type of length like inch or cm.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-80d5-9087-ccb7c47812aa" class="numbered-list" start="4"><li>I opened Onshape and created a new document.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8028-8f32-ca68f22262b3" class="numbered-list" start="5"><li>Now from the first minute of the video ı have learnt that we had to set up all the variables we are going to use before using them or else it wont work, so I started setting up different lengths and heights for the parts of the sketch. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8003-8516-e375556c25a1" class="numbered-list" start="6"><li>I named them armLengthX and headHeightY etc.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-80f3-a82b-d75225b1a341" class="numbered-list" start="7"><li>After that by looking at the picture provided in the assignment I started sketching.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8021-8791-c72cb40f8951" class="numbered-list" start="8"><li>This time when setting up dimensions instead of using numbers I used variables.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8072-aed4-cc32033fb6e3" class="numbered-list" start="9"><li>Then I extruded these sketches and finished my design.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8077-a900-c9f792309ab0" class="numbered-list" start="10"><li>Lastly I took an screenshot, exported in 3mf. form and generated a link so I could add them to the notion site.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8023-9902-fc8fdcff293d" class="numbered-list" start="11"><li>While doing this project I learned that variables in Onshape are values that allows you to control the sizes in the design so changing one value automatically updates the whole model without having to change everything manually.</li></ol></div><div style="display:contents" dir="auto"><p id="2e8b731e-7a39-808a-8c96-ee37cf46287e" class=""><a href="https://cad.onshape.com/documents/afe1b098851edab8a88f3382/w/586c4659fc9651351ae9d272/e/b8ed18341392e29c93afb932?renderMode=0&amp;uiState=696787cc016eab5301e91fe0">Figurine</a></p></div><div style="display:contents" dir="ltr"><figure id="2e8b731e-7a39-8078-871c-ed3ea65df3d5" class="image" style="text-align:left"><a href="3D%20Designs/Screenshot_2026-01-14_at_15.17.51.png"><img style="width:288px" src="3D%20Designs/Screenshot_2026-01-14_at_15.17.51.png"/></a><figcaption>ScreenShot on Onshape</figcaption></figure></div><div style="display:contents" dir="ltr"><figure id="2e8b731e-7a39-8037-9464-c924f54718fa"><div class="source"><a href="3D%20Designs/Part_Studio_1_(2).3mf">Figurine Project</a></div></figure></div><div style="display:contents" dir="auto"><p id="2f6b731e-7a39-8025-91cb-d7a57023905b" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2fdb731e-7a39-8024-9727-e9640f50002b" class="">Basic Matryoshka Toy: </h2></div><div style="display:contents" dir="auto"><p id="2fdb731e-7a39-800e-bc17-c61967f24812" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-8019-9c49-c57ea759d05d" class="numbered-list" start="1"><li>I did intense thinking and tried to come out with the best toy I could design.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-80ab-a432-c96c8cfeb37c" class="numbered-list" start="2"><li>I opened onshape and started a new document.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-8007-b5f0-c290a66bbd55" class="numbered-list" start="3"><li>I created 1 10x10 circle and made it height 10cm, then I made it 3D.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-802f-9a49-dbf2520d2c20" class="numbered-list" start="4"><li>İ created another circe with the same width and height but I decreased 0.5 cm from them.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-80b4-983b-c839d2b4f3b8" class="numbered-list" start="5"><li>İ extraverted the second design and pressed remove it creating a hole. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-8028-9ae5-f06b35d22ffc" class="numbered-list" start="6"><li>I created another sketch with the same width and height but made it so it fits in the hole like a matryoshka doll.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-8003-abb4-d82fd28f90cc" class="numbered-list" start="7"><li>I checked and fixed the height to be 10x10 I made sure of that and checked if it was parametric which it was.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2b6b731e-7a39-809f-83c0-f46862dcbfd4" class="numbered-list" start="8"><li>I saved my new design called matryoshka doll demo.</li></ol></div><div style="display:contents" dir="auto"><div id="2f6b731e-7a39-804a-8a7c-df288aa27928" class="column-list"><div style="display:contents" dir="auto"><div id="2f6b731e-7a39-80f4-a934-ed036fad4867" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="2b6b731e-7a39-803c-93b5-e302cbd6df3c"><div class="source"><a href="https://drive.google.com/file/d/1-QnbO5QIULqlhB3LC-Nbv9B7x0whFdra/view?usp=sharing">https://drive.google.com/file/d/1-QnbO5QIULqlhB3LC-Nbv9B7x0whFdra/view?usp=sharing</a></div><figcaption><em><strong>Video Explanation</strong></em></figcaption></figure></div></div></div><div style="display:contents" dir="auto"><div id="2f6b731e-7a39-80d8-9ccc-e89300814dc0" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="2b6b731e-7a39-80c9-a44d-da15e4856f9b" class="image" style="text-align:right"><a href="3D%20Designs/Screenshot_2025-11-25_at_11.59.25.png"><img style="width:288px" src="3D%20Designs/Screenshot_2025-11-25_at_11.59.25.png"/></a><figcaption><em><strong>ScreenShot of Design</strong></em></figcaption></figure></div></div></div></div></div><div style="display:contents" dir="auto"><p id="2f6b731e-7a39-8033-b057-f17346f8683a" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="2fdb731e-7a39-80d3-b3ff-e57cbb8acf6f" class="">Car Project:</h2></div><div style="display:contents" dir="auto"><p id="305b731e-7a39-8071-a79b-f4118d13fe67" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

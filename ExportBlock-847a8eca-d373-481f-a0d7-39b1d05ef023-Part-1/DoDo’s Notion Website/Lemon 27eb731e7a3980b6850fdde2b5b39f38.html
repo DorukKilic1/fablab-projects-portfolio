@@ -1,0 +1,737 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Lemon</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="27eb731e-7a39-80b6-850f-dde2b5b39f38" class="page sans"><header><h1 class="page-title" dir="auto">Lemon</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h2 id="2e8b731e-7a39-805e-938a-dc01b6093e06" class=""><strong>Lemon Fish Project</strong></h2></div><div style="display:contents" dir="auto"><p id="2fdb731e-7a39-809d-b757-d43acf2f2239" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8025-a402-c8626de0b531" class="numbered-list" start="1"><li>I got the drawing of the fish from Emre.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-80c9-85fa-ff90bbfe3075" class="numbered-list" start="2"><li>The drawing isn’t enough so i had to use a ruler and measure the lengths and the heights of the fish parts.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8061-934b-c97ba218660b" class="numbered-list" start="3"><li>After measuring i changed the document I got from Emre to an png and downloaded it to Onshape.<div style="display:contents" dir="ltr"><figure id="2e8b731e-7a39-8089-b45c-ca9902d02870"><div class="source"><a href="Lemon/Copy_of_lime_son_comp_(1).ai">Copy of lime son comp (1).ai</a></div></figure></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-806e-bb37-c97bf15e684c" class="numbered-list" start="4"><li>After downloading the document to Onshape I opened a new document and inserted the png to the document.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8001-bf2a-c2cd482f3d59" class="numbered-list" start="5"><li>I renamed the document Lemon Fish Project and started sketching on the top lane.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8004-932b-df0f374cb16c" class="numbered-list" start="6"><li>I used line, spline, 3 point circle, conic circle to draw the same lines that are also on the sketch.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-805f-9cb9-e5e6cdec6e80" class="numbered-list" start="7"><li>Instead of repeating the same lines again and again i used commands and tools like copy and paste, Linear pattern, mirror, offset and lastly transform which really improved my work efficiency. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-801d-be66-fd75f7924bc9" class="numbered-list" start="8"><li>Instead of extruding everything that is included on the sketch i handpicked the parts I wanted to extrude so later I wouldn’t have to extrude again to make the holes on the parts.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-80b0-9531-deb233fe97be" class="numbered-list" start="9"><li>This really saved me up on time.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-8070-abc1-ff8439458010" class="numbered-list" start="10"><li>Lastly I made sure I added constraints so if changed any length or height while printing it it would also match the other lengths or parts to make it always give us the print we wanted.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-805b-bf50-edf7220cb35a" class="numbered-list" start="11"><li>It is also important to mention this because it makes our design a lot more thought trough.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-80e5-884c-cb492445bd1e" class="numbered-list" start="12"><li>After that I added colors to it by right clicking on the shapes to make it easier on eyes.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-805c-9b55-e48effe40070" class="numbered-list" start="13"><li>And lastly I took an screenshot, created a share-link and exported it with 3mf form which makes it ready to print.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2e8b731e-7a39-80e3-b51c-d16d2d54fc99" class="numbered-list" start="14"><li>I had a lot of fun while designing this project and it really helped me improve my efficiency and speed while designing on Onshape.</li></ol></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-80a7-89b9-fc12af4e87e9" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2e8b731e-7a39-8075-b9be-d24ba9122dff" class="">Here are the attachments:</p></div><div style="display:contents" dir="auto"><p id="2e8b731e-7a39-806a-a96d-eadcd666a24a" class=""><a href="https://cad.onshape.com/documents/a4d269636272a0114b9d8d56/w/07776243a2c53176185dd7c7/e/d81a157bf7419143375b6744?renderMode=0&amp;uiState=6967559cbe5b1bf69df68710">Lemon Fish Project Onshape</a> </p></div><div style="display:contents" dir="ltr"><figure id="2e8b731e-7a39-80bf-8739-c7c06008b002"><div class="source"><a href="Lemon/Part_Studio_1.3mf">Part Studio 1.3mf</a></div></figure></div><div style="display:contents" dir="ltr"><figure id="2e8b731e-7a39-803c-bcdb-d5df733e6689" class="image" style="text-align:left"><a href="Lemon/a782ce55-d9cd-46cd-bf63-c0a809438888.png"><img style="width:384px" src="Lemon/a782ce55-d9cd-46cd-bf63-c0a809438888.png"/></a><figcaption><em><strong>ScreenShot of Design</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-802a-a209-fc144fb6c60e" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-80d5-abb6-d4fe155ec1cd" class="numbered-list" start="15"><li>After I finished the design on 3d I had to make it 2D in order to make it printable on the xToolP3 laser printer.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-8098-afa6-c6997d4ba338" class="numbered-list" start="16"><li>I pressed the + icon and then picked drawing. After that it asked me what image tool to use on the drawing, I picked the one Onshape provided since it was the most effective. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-8093-a796-e2761ed64573" class="numbered-list" start="17"><li>Lastly for the drawing it asked me which parts to include and I picked Part Studio 1 because it includes all of the parts and that would be more effective then picking all the parts by hand. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-805e-85b2-d6f1d71d1034" class="numbered-list" start="18"><li>It generated a 2D drawing for me and I had to put an scale model and then my design. For it to be less confusing I deleted everything else other then my design and exported it the same way I exported a design for 3D but this time I picked SVG format since it was the most compatible with our tool.<div style="display:contents" dir="auto"><div id="2f6b731e-7a39-807a-b499-c5a3666d9c2b" class="column-list"><div style="display:contents" dir="auto"><div id="2f6b731e-7a39-809b-856a-d1c4e778dd11" style="width:43.75%" class="column"><div style="display:contents" dir="ltr"><figure id="2f6b731e-7a39-807c-882d-e573d7c683a4" class="image"><a href="Lemon/bd1301cc-2bde-471c-a132-e88e5c172744.png"><img style="width:240px" src="Lemon/bd1301cc-2bde-471c-a132-e88e5c172744.png"/></a><figcaption><em><strong>Creating Drawing</strong></em></figcaption></figure></div></div></div><div style="display:contents" dir="auto"><div id="2f6b731e-7a39-80ff-b348-d658f07bb56d" style="width:56.24999999999998%" class="column"><div style="display:contents" dir="ltr"><figure id="2f6b731e-7a39-80cf-8182-ff4fe6d86701" class="image"><a href="Lemon/Screenshot_2026-01-29_at_00.24.57.png"><img style="width:240px" src="Lemon/Screenshot_2026-01-29_at_00.24.57.png"/></a><figcaption><em><strong>Exporting</strong></em></figcaption></figure></div></div></div></div></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-8021-8c59-cbdad7030548" class="numbered-list" start="19"><li>I sent the SVG file to 3D Hisar mail, opened the xToolP3 and also the computer connected to it.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-80f9-b14c-e9c2685b9ab0" class="numbered-list" start="20"><li>I downloaded the SVG file on that computer and inserted the file to the app of xTool, I measured one of the parts of a finished Lemon fish and then changed the dimensions of the design on the app until the part I measured from the finished version matched the same part on the app. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-8009-8fb2-fe0061f636fe" class="numbered-list" start="21"><li>This made sure that all of the parts had the dimensions that we wanted meaning the same as the finished product I measured from. Also it is important to mention that using the measure tool on the xToolP3 app is very helpful while making sure the dimensions are what we want.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-8006-89c1-f31ed4eb1fcc" class="numbered-list" start="22"><li>I prepared the laserCutter by measuring the material, putting it inside the machine and strapping it, opening the ventilation machine so while printing it wouldn&#x27;t smell horrible and cleaning the circles inside the machine so it could scan the material. After that I opened and closed the lid of the machine until it scanned the material.</li></ol></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-80a3-aee7-d7c6c54afdb1" class="">
+</p></div><div style="display:contents" dir="auto"><div id="2f6b731e-7a39-8026-8270-d52ec7644618" class="column-list"><div style="display:contents" dir="auto"><div id="2f6b731e-7a39-80f2-942e-ecc9fca96631" style="width:25%" class="column"><div style="display:contents" dir="ltr"><figure id="2f6b731e-7a39-80e2-938f-e3959ead95b4" class="image"><a href="Lemon/03E55CE2-2684-4866-8C57-E18DF6F35B8D_1_105_c.jpeg"><img style="width:144px" src="Lemon/03E55CE2-2684-4866-8C57-E18DF6F35B8D_1_105_c.jpeg"/></a><figcaption><em><strong>Ventilator</strong></em></figcaption></figure></div></div></div><div style="display:contents" dir="auto"><div id="2f6b731e-7a39-8077-aa6f-f91489e3ace2" style="width:75.00000000000003%" class="column"><div style="display:contents" dir="ltr"><figure id="2f6b731e-7a39-806e-ab37-e55f636a6e83" class="image"><a href="Lemon/9E9AF700-6AAA-49F8-9073-D24F584822EB_1_105_c.jpeg"><img style="width:144px" src="Lemon/9E9AF700-6AAA-49F8-9073-D24F584822EB_1_105_c.jpeg"/></a><figcaption><em><strong>Material</strong></em></figcaption></figure></div></div></div></div></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-80ec-b083-fadd37ee34fa" class="numbered-list" start="23"><li>Since I measured the material it was easy for me to pick the cutting settings (Power and Speed) because it had saved options for multiple materials, I just had to find and select my material according to my measurement and pick how I wanted my cutting to look that automatically set the settings according to it.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-804e-90d2-c6e2e680818f" class="numbered-list" start="24"><li>After that I pressed continue and the start button on the machine.</li></ol></div><div style="display:contents" dir="auto"><p id="2f6b731e-7a39-806a-9c88-cc5810c79b15" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2f6b731e-7a39-8078-8217-f4fc7ba476df" class="image" style="text-align:left"><a href="Lemon/1E4A2FE3-47F7-43E8-BCCA-113F26FF6604_1_105_c.jpeg"><img style="width:144px" src="Lemon/1E4A2FE3-47F7-43E8-BCCA-113F26FF6604_1_105_c.jpeg"/></a><figcaption><em><strong>xToolP3 App</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-80c6-b6f4-f8db289a77d9" class="numbered-list" start="25"><li>It started printing but something went wrong and the machine only engraved it. I tried again and this time the machine burned it. Turns out the machine was broken.</li></ol></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-800e-9581-fa1acccf9cb7" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2f6b731e-7a39-80f8-9f5f-e27b76511045" class="image" style="text-align:left"><a href="Lemon/C1E55E98-0F09-4774-A643-765098EA8807_1_201_a.heic"><img style="width:192px" src="Lemon/C1E55E98-0F09-4774-A643-765098EA8807_1_201_a.heic"/></a><figcaption><em><strong>xToolP3 Working</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-80b7-8183-dc1ca21b3d69" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-805c-a475-cd4a3ab087cd" class="numbered-list" start="26"><li>The available teacher tried fixing it by cleaning the lenses of the machine and even cleaned some inside part of it but it was futile. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-80c6-99b2-ddbc2c4f212a" class="numbered-list" start="27"><li>I thought if the machines speed and power settings were broken I could find new working values for both cutting and engraving by printing little shapes on different speed and Power settings. After multiple attempts I finally figured out the correct values of them and noted the values on a post-it for others to use. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="2f6b731e-7a39-804a-bc38-c7bedd58cc6d" class="numbered-list" start="28"><li>After that I printed my design again and this time it worked. I removed the material and collected my prints carefully so they wouldn&#x27;t break.</li></ol></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-80d1-a0d3-e5a47ea78f45" class=""><div class="indented"><div style="display:contents" dir="ltr"><figure id="2f6b731e-7a39-80fe-aa9a-e6a4181f95b1" class="image"><a href="Lemon/0149a799-972e-4970-a2f3-6e81cd7ca1a7.png"><img style="width:240.00000000000003px" src="Lemon/0149a799-972e-4970-a2f3-6e81cd7ca1a7.png"/></a><figcaption><em><strong>Collecting the Printed Parts</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><h3 id="2f6b731e-7a39-80f4-a099-e841fd4b7444" class="">xToolP3 Machines Basics:</h3></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-80e2-8aaf-c1ad84d4b4a5" class="">
+</p></div><div style="display:contents" dir="auto"><ul id="2f6b731e-7a39-8056-9cd0-c237f63740f7" class="bulleted-list"><li style="list-style-type:disc">Wants 2D file and works best with SVG format.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f6b731e-7a39-8051-b3dc-c9d0a1ec45ca" class="bulleted-list"><li style="list-style-type:disc">Always start the ventilator so it doesn’t smell unbearable.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f6b731e-7a39-803b-8cb3-f7a606f39893" class="bulleted-list"><li style="list-style-type:disc">Always make sure the circles are clean so the machine can scan properly.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f6b731e-7a39-80f7-8c33-e077eba2650c" class="bulleted-list"><li style="list-style-type:disc">Always strap the material tightly.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f6b731e-7a39-8007-9419-dce5e0331073" class="bulleted-list"><li style="list-style-type:disc">Measure the material so you can automatically pick the printing settings.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f6b731e-7a39-805a-bdcb-e492a450d6af" class="bulleted-list"><li style="list-style-type:disc">Always use auto scanner before printing.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f6b731e-7a39-80e1-9982-ccc2186a460c" class="bulleted-list"><li style="list-style-type:disc"><strong>Always watch the machine for any errors (Exp: Burning).</strong></li></ul></div><div style="display:contents" dir="auto"><ul id="2f6b731e-7a39-8041-bc61-f5e09d05bcd5" class="bulleted-list"><li style="list-style-type:disc">Always put the design in a good position so you save from material.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f6b731e-7a39-807c-abb2-cdd3a0e5b4f8" class="bulleted-list"><li style="list-style-type:disc">Always cleanup after usage until its the way you want to see it before printing.</li></ul></div></div></p></div><div style="display:contents" dir="auto"><p id="2fcb731e-7a39-801f-9726-ef30919ea854" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2fcb731e-7a39-80b4-abe3-e3ec1ad0f41c" class="numbered-list" start="29"><li>Now I am going to start building the fish with the parts based on the instructions on the Lemon building handbook. Also there is a website for help/how to Lemon made by the people in the Faplab but sadly it didn&#x27;t help much because the videos were not found. </li></ol></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-8062-9ab2-c24d6908c069" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2fcb731e-7a39-809b-a1bb-de045e34f67e" class="image" style="text-align:left"><a href="Lemon/Screenshot_2026-02-03_at_14.20.35.png"><img style="width:288px" src="Lemon/Screenshot_2026-02-03_at_14.20.35.png"/></a><figcaption><em><strong>The Error</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-803c-a0f2-cf2ffe4989f3" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2fcb731e-7a39-809b-b3f7-e7be64ca986a" class="numbered-list" start="30"><li>I’ve started building the robot at the lab but it took longer then I expected so I gathered the items I required and took them home with the permission from the teacher. I heard that the biggest issue that could happen was the wood not bending for the head part but fortunately that did not happen and everything went perfectly.</li></ol></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-8083-8138-ffd41a03e9cf" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2fcb731e-7a39-8001-8173-e0415ab66479" class="image" style="text-align:left"><a href="Lemon/WhatsApp_Image_2026-01-30_at_15.50.20.jpeg"><img style="width:336px" src="Lemon/WhatsApp_Image_2026-01-30_at_15.50.20.jpeg"/></a><figcaption><em><strong>The progress I obtained at my house</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><p id="2feb731e-7a39-8018-9b8a-e06a983b50e4" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2fcb731e-7a39-8030-bf1f-c01e796c0401" class="numbered-list" start="31"><li>I finished building the robot the next day at the lab. Additionally I colored it and added some physical features for personalization. The only thing left for me now is to test if it works which I will do tomorrow. </li></ol></div><div style="display:contents" dir="auto"><div id="2fcb731e-7a39-8064-83e2-c0e0be6d07a2" class="column-list"><div style="display:contents" dir="auto"><div id="2fcb731e-7a39-808b-8fb4-ea2ebf3dd03f" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="2fcb731e-7a39-8063-accd-e9690257b4a6" class="image" style="text-align:left"><a href="Lemon/IMG_2383.jpeg"><img style="width:288px" src="Lemon/IMG_2383.jpeg"/></a><figcaption><em><strong>Photo of the Lemon fish before personalization</strong></em></figcaption></figure></div></div></div><div style="display:contents" dir="auto"><div id="2fcb731e-7a39-8029-aaad-d1af568252b4" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="2fcb731e-7a39-8009-b127-e75aaafbfea0" class="image" style="text-align:right"><a href="Lemon/IMG_2384.jpeg"><img style="width:384px" src="Lemon/IMG_2384.jpeg"/></a><figcaption><em><strong>Photo of the Lemon fish after personalization.”</strong></em></figcaption></figure></div></div></div></div></div><div style="display:contents" dir="auto"><ol type="1" id="2fcb731e-7a39-807b-9670-c18fe8d81180" class="numbered-list" start="32"><li>I checked out the introductions on the website because the handbook was being used. I read everything after assembling the Lemon parts meaning the Pico parts.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="303b731e-7a39-80e0-98fd-e431377428e3" class="numbered-list" start="33"><li>This was my first time using Pico, I got the Pico, Pico to computer cable and some other normal cables to connect the Lemon to the Pico from Senanur.</li></ol></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-80c3-85e2-d5f7747a0f78" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="303b731e-7a39-802d-825a-e2f8d1e50fc9" class="image" style="text-align:left"><a href="Lemon/IMG_2502.jpeg"><img style="width:288px" src="Lemon/IMG_2502.jpeg"/></a><figcaption><em><strong>Irmak Sharing All The Files I Need</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-803a-81f9-f9365304f119" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="2feb731e-7a39-80ce-971c-ec8147e40443" class="numbered-list" start="34"><li>After that Irmak shared all the files I need. She didn’t have the code for the Pico but I learned how to write the code for it on the handbook/GitHub page.</li></ol></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-8017-91d9-eb11f831e455" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="303b731e-7a39-80e1-b624-ff838e8654c4" class="image" style="text-align:left"><a href="Lemon/photo.png"><img style="width:192px" src="Lemon/photo.png"/></a><figcaption><em><strong>How To Connect The Cables</strong></em></figcaption></figure></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-807a-929a-e7afd1cabf48" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="303b731e-7a39-808d-8bdf-d1acb4fa6b10" class="numbered-list" start="35"><li>I connected the Lemon to the Pico, then connected the Pico to the computer. While connecting the Pico to the computer I pressed and held the button on the Pico and released after the cable was inserted in order to connect them all.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="303b731e-7a39-80b3-98f2-d6a72ea7f807" class="numbered-list" start="36"><li>I found the code document inside the folder Irmak shared and opened it with Vscode.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="303b731e-7a39-80af-a3bc-c0cd8e17de17" class="numbered-list" start="37"><li>I searched opened GitHub, went to the page of <a href="https://github.com/HisarCS?q=lemon&amp;type=all&amp;language=&amp;sort=">HisarCS</a> and searched for Lemon inside repositories. I found and clicked on it. </li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="303b731e-7a39-800f-95d5-c4946da21695" class="numbered-list" start="38"><li>I found the code of Pico for Lemon and learnt how it works. I opened the empty code file that Irmak sent, inserted the code for Pico to it and then I made sure the changes were saved.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="303b731e-7a39-8011-bd2f-eab5973674ac" class="numbered-list" start="39"><li>I moved the adafruit from the folder to my desktop, sent it to the Pico that came to my desktop after the cable was inserted and started the testing by removing the cable from the Pico and clicking on its button.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="303b731e-7a39-801a-8aa8-d71b9da6a288" class="numbered-list" start="40"><li>The motors were working as they should, after that I recolored my Lemon with Irmak.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="303b731e-7a39-80c2-ad20-ee30248eadc5" class="numbered-list" start="41"><li>After a lot of work and efforts my Lemon project was finally finished and with everything working successfully.</li></ol></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-804c-85a0-eddeb555a108" class="">
+</p></div><div style="display:contents" dir="auto"><div id="303b731e-7a39-80b6-93af-ff79191d36a3" class="column-list"><div style="display:contents" dir="auto"><div id="303b731e-7a39-804f-9026-ca463ab7013a" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="303b731e-7a39-8078-a42c-c694c6c4a9bc" class="image" style="text-align:left"><a href="Lemon/CheckingMotors.jpeg"><img style="width:336px" src="Lemon/CheckingMotors.jpeg"/></a><figcaption><em><strong>Irmak Approving My Lemon </strong></em></figcaption></figure></div></div></div><div style="display:contents" dir="auto"><div id="303b731e-7a39-8079-b0b3-d326a4c049ae" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="303b731e-7a39-8011-98e0-e94d6bf6d5f4" class="image"><a href="Lemon/FinishedLemon.jpeg"><img style="width:336px" src="Lemon/FinishedLemon.jpeg"/></a><figcaption><em><strong>Re-coloring the Lemon with Irmak</strong></em></figcaption></figure></div></div></div></div></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-805b-bf19-d094aaf22fbb" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="303b731e-7a39-80d4-abc5-fb1200925abe" class="">While Doing This Project I Learned:</h2></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-8009-bef0-cf39ee11f9ed" class="">
+</p></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-80f4-8b0e-f06546937d91" class="bulleted-list"><li style="list-style-type:disc">What a Lemon Robot is.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-807b-ace1-dcc522f2e349" class="bulleted-list"><li style="list-style-type:disc">How to design a Lemon Robot staring from scratch.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-802c-8d1b-c0f92016dea4" class="bulleted-list"><li style="list-style-type:disc">How to convert a 3D design to 2D.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-80f6-817b-ecf1c089bddc" class="bulleted-list"><li style="list-style-type:disc">How to create a 2D design.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-804d-a112-e65db701ce1b" class="bulleted-list"><li style="list-style-type:disc">How to modify a 2D design.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-8029-8eb2-e30924bf8b99" class="bulleted-list"><li style="list-style-type:disc">How to modify a design on xToolP3.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-8015-b204-da97c8b90582" class="bulleted-list"><li style="list-style-type:disc">How to clean the inside of xToolP3 to enable printing.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-8060-a728-e68e952ba9c3" class="bulleted-list"><li style="list-style-type:disc">How to cut or engrave with xToolP3.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-805a-b31e-ddc52df14162" class="bulleted-list"><li style="list-style-type:disc">How to assemble Lemon parts.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-80d0-a600-ec84745ceae6" class="bulleted-list"><li style="list-style-type:disc">Where the HisarCS Projects/Documentations are located.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-800c-ab6b-c8a8a310ceba" class="bulleted-list"><li style="list-style-type:disc">What a Pico is.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-80cb-a1ea-ed88b43fdd0c" class="bulleted-list"><li style="list-style-type:disc">How a Pico works.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-8082-ba12-dd398598cc23" class="bulleted-list"><li style="list-style-type:disc">How to connect a Pico to a computer and multiple motors.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-806d-b157-cd74c6c84194" class="bulleted-list"><li style="list-style-type:disc">How to write code for Pico.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-8091-a0fa-c99885310905" class="bulleted-list"><li style="list-style-type:disc">How to send code to Pico.</li></ul></div><div style="display:contents" dir="auto"><ul id="303b731e-7a39-80c7-a721-fea017fb76e1" class="bulleted-list"><li style="list-style-type:disc">How to start a Pico.</li></ul></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-8030-9c42-f6c835f0c9e4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-804f-ab0e-cf0c1c11c1e8" class="">Also most importantly I had a lot of fun and gained experience/knowledge while doing this project.</p></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-8090-87ff-c7d2a2380ebe" class="">
+</p></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-80b0-be71-ff860a967ae4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="303b731e-7a39-808d-8a90-dbde6b5a78c0" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
