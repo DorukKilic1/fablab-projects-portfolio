@@ -15,8 +15,7 @@
 
 ***The SVG file of the Ruler***
 
-[***The design in 3MF format***]
-<img src="17%20Cm%20Ruler%20For%20Lab/Part_Studio_1.3mf" width="300">
+[***The design in 3MF format***](17%20Cm%20Ruler%20For%20Lab/Part_Studio_1.3mf)
 
 
 ![***The Ruler***](17%20Cm%20Ruler%20For%20Lab/IMG_2400.jpeg)
