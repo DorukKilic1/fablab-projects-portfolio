@@ -11,7 +11,7 @@
 
 [Keychain](https://cad.onshape.com/documents/8e78df34a7bba4d017917243/w/f6c0631aacb1590b4fa18141/e/84125dbe26bf61cc6d5957c8?renderMode=0&uiState=69256995fa303007aed8f567) 
 
-![***ScreenShot on Onshape***]
+
 <img src="3D%20Designs/Screenshot_2025-11-25_at_11.29.02.png" width="400">
 
 ***ScreenShot on Onshape***
