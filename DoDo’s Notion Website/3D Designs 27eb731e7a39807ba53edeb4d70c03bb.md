@@ -31,7 +31,7 @@
 
  
 
-![***ScreenShot on Onshape***](3D%20Designs/Screenshot_2025-11-26_at_14.34.54.png)
+<img src="3D%20Designs/Screenshot_2025-11-26_at_14.34.54.png" width="400">
 
 ***ScreenShot on Onshape***
 
@@ -57,7 +57,7 @@ Then you need to pick the format you want the file to be in and you're done.
 
 [Cake Project](3D%20Designs/Part_Studio_1-3.3mf)
 
-![***ScreenShot On Onshape***](3D%20Designs/Screenshot_2025-11-28_at_11.58.47.png)
+<img src="3D%20Designs/Screenshot_2025-11-28_at_11.58.47.png" width="300">
 
 ***ScreenShot On Onshape***
 
@@ -75,7 +75,7 @@ Then you need to pick the format you want the file to be in and you're done.
 
  
 
-![ScreenShot On Onshape](3D%20Designs/Screenshot_2025-12-02_at_14.03.18.png)
+<img src="3D%20Designs/Screenshot_2025-12-02_at_14.03.18.png" width="300">
 
 ScreenShot On Onshape
 
@@ -95,7 +95,7 @@ ScreenShot On Onshape
     [Elephant Project](3D%20Designs/Part_Studio_1_(4).3mf)
     
 
-![***ScreenShot on Onshape***](3D%20Designs/Screenshot_2025-12-19_at_18.58.11.png)
+<img src="3D%20Designs/Screenshot_2025-12-19_at_18.58.11.png" width="300">
 
 ***ScreenShot on Onshape***
 
@@ -115,7 +115,7 @@ ScreenShot On Onshape
 
 [Figurine](https://cad.onshape.com/documents/afe1b098851edab8a88f3382/w/586c4659fc9651351ae9d272/e/b8ed18341392e29c93afb932?renderMode=0&uiState=696787cc016eab5301e91fe0)
 
-![ScreenShot on Onshape](3D%20Designs/Screenshot_2026-01-14_at_15.17.51.png)
+<img src="3D%20Designs/Screenshot_2026-01-14_at_15.17.51.png" width="300">
 
 ScreenShot on Onshape
 
@@ -136,7 +136,7 @@ ScreenShot on Onshape
 
 ***Video Explanation***
 
-![***ScreenShot of Design***](3D%20Designs/Screenshot_2025-11-25_at_11.59.25.png)
+<img src="3D%20Designs/Screenshot_2025-11-25_at_11.59.25.png" width="300">
 
 ***ScreenShot of Design***
 
