@@ -10,13 +10,14 @@
 8. The ruler came out without any unexpected mistakes so went back to the prepare page, duplicated the design and printed again.
 9. I printed multiple rulers at the end, they came out perfect and ready to use for any measurements.
 
-![***The SVG file of the Ruler***]<img src="17%20Cm%20Ruler%20For%20Lab/Drawing_1.svg" width="300">
+![***The SVG file of the Ruler***] 
+<img src="17%20Cm%20Ruler%20For%20Lab/Drawing_1.svg" width="300">
 
 ***The SVG file of the Ruler***
 
-[***The design in 3MF format***](17%20Cm%20Ruler%20For%20Lab/Part_Studio_1.3mf)
+[***The design in 3MF format***]
+<img src="17%20Cm%20Ruler%20For%20Lab/Part_Studio_1.3mf" width="300">
 
-***The design in 3MF format***
 
 ![***The Ruler***](17%20Cm%20Ruler%20For%20Lab/IMG_2400.jpeg)
 
