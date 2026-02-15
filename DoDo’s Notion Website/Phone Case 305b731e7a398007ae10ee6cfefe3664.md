@@ -15,7 +15,7 @@
 13. It came out perfect and I learned how to use a new machine, use the offset tool and modify designs on the xTool app.
 14. I also downloaded the offset version and stored it on my computer.
 
-![***Case After Printing.***](Phone%20Case/IMG_2536.jpeg)
+<img src="Phone%20Case/IMG_2536.jpeg" width="300">
 
 ***Case After Printing.***
 
