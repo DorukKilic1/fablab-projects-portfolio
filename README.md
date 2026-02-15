@@ -1,6 +1,5 @@
 Who is **DoDo** ? :
 
-![IMG_1105.PNG]
 <img src="DoDo%E2%80%99s%20Notion%20Website/4236a745-7851-4168-9077-68433d4dcaa0.png" width="300">
 
 
