@@ -1,1 +1,57 @@
-Documentation
+1) Instead of creating a basic robot ı wanted to be better and brainstormed for an sketch idea that would be extraordinary. Then I decided on making the robot
+animal (monkey) shaped. 
+2) I opened onshape, logged in and started a new sketch.
+3) I noted down the dimensions of the Micro Servo SG90 as you can see below.
+
+
+
+
+4) I sketched and then extraduted the desing to make it 3D.
+5) I added spaces by sketching and the remove extraduting for the areas where the micro motors will go in.
+6) I exported the 3.mf file and sent it to the hisar 3D mail. I printed my design.
+
+Here is The File of My Design: 
+
+
+7) I aquired the micro motors from Ms. Senanur and put them in to their holes.
+
+Micro Servo SG90:
+
+
+After putting the micros into their holes I noticed that the design I printed would need something to stand upright because it kept falling.
+8) I searched the internet to find a caster wheel sketch that would enable my robot to stand upright.
+9) I found a design I liked and downloaded it in 3.mf format.
+
+Here is The File of The Caster Wheel:
+
+
+10) I was going to scale the caster wheel but saw that it wasn't needed so ı staright up printed it.
+11) I sticked the caster wheel and my robot together and my robot was standing upright at last.
+12) After my physical work was finished I opened up makeCode.microbit website to code the device.
+13) I coded by using blocks since I didin't have time to learn another coding language. 
+14) I got my microbit controller and attached it to my computer, then I connected it through the website.
+
+Microbit Controller: 
+
+
+15) I got multiple male to male jumper cables, 1 servo required 3 cables that had 1 of their ends connected to the servos cables and 
+the other end connected to a crocodile cable.
+16) I connected the crocodile cables to the jumper cables by color since ı colorcoded the jumper cables expecting the wiring to look confusing if ı didn't.
+17) I connected the crocodile cables to the microbit controller.
+18) I downloaded my code to the microbit controller from the website and pressed the buttons of the controller checking if its working or not.
+19) My code, wiring, design was all working perfectly.
+20) I documented my experience.
+
+H.M.: I noticed that the crocodile cables were disconnecting when the robot moved and researched how I could make them not disconnect so my robot wouldnt stop working
+I found out that using a male to crocodile cable was far more effective and that way the wiring wouldnt keep disconnecting, sadly we didn't have those in our
+computer lab. Nonortheless even thought I wouldnt be able to make it I learnt how to make it better.
+
+
+How To Connect a Microbit Controller To a Computer and Code It:
+1. 
+
+
+
+
+
+
