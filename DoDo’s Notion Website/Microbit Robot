@@ -36,8 +36,16 @@ Microbit Controller:
 
 15) I got multiple male to male jumper cables, 1 servo required 3 cables that had 1 of their ends connected to the servos cables and 
 the other end connected to a crocodile cable.
+
+Male to Male Cable: 
+
+
 16) I connected the crocodile cables to the jumper cables by color since ı colorcoded the jumper cables expecting the wiring to look confusing if ı didn't.
 17) I connected the crocodile cables to the microbit controller.
+
+Crocodile Cable:
+
+
 18) I downloaded my code to the microbit controller from the website and pressed the buttons of the controller checking if its working or not.
 19) My code, wiring, design was all working perfectly.
 20) I documented my experience.
@@ -47,8 +55,27 @@ I found out that using a male to crocodile cable was far more effective and that
 computer lab. Nonortheless even thought I wouldnt be able to make it I learnt how to make it better.
 
 
-How To Connect a Microbit Controller To a Computer and Code It:
-1. 
+**How To Connect a Microbit Controller To a Computer and Code It:**
+1. Open https://makecode.microbit.org and log in.
+2. Start new project.
+3. Connect ur microbit controller to your computer by its cable.
+4. Click the three dots right next to the download button on the left bottom of the screen and follow instruductions.
+5. You can write your code by blocks or using a coding language.
+6. After writing your code press download and ur controller should be working.
+
+
+**Microbit Controller Basics:***
+
+
+
+
+**How To Connect a Microbit Controller To a Micro Servo Motor (SG90):**
+1. Get 3 male to male jumper cables for each motor.
+2. Get multiple crocodile cables.
+3. Plug one side of the cables to the motors cable and the other end of the cables to the crocodile cable.
+4. Clip the crocodile cables to the controller based on the intruductions on the image bellow.
+
+
 
 
 
