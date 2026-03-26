@@ -17,6 +17,7 @@ Here is The File and The Image of My Design:
 7) I aquired the micro motors from Ms. Senanur and put them in to their holes.
 
 Micro Servo SG90:
+
 ![Servo](Microbit%20Robot%20Project/Servo.jpg)
 
 After putting the micros into their holes I noticed that the design I printed would need something to stand upright because it kept falling.
