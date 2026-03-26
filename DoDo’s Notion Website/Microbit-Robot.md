@@ -1,12 +1,11 @@
-1) Instead of creating a basic robot ı wanted to be better and brainstormed for an sketch idea that would be extraordinary. Then I decided on making the robot
-animal (monkey) shaped. 
+1) Instead of creating a basic robot ı wanted to be better and brainstormed for an sketch idea that would be extraordinary. Then I decided on making the robot animal (monkey) shaped. 
 2) I opened onshape, logged in and started a new sketch.
 3) I noted down the dimensions of the Micro Servo SG90 as you can see below.
 
 ![ServoDimensions](Microbit%20Robot%20Project/ServoDimensions.jpg)
 
 
-4) I sketched and then extraduted the desing to make it 3D.
+4) I sketched and then extraduted the design to make it 3D.
 5) I added spaces by sketching and the remove extraduting for the areas where the micro motors will go in.
 6) I exported the 3.mf file and sent it to the hisar 3D mail. I printed my design.
 
