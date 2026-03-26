@@ -30,7 +30,8 @@ Here is The File and The Image of The Caster Wheel:
 10) I was going to scale the caster wheel but saw that it wasn't needed so ı staright up printed it.
 11) I sticked the caster wheel and my robot together and my robot was standing upright at last.
 12) After my physical work was finished I opened up makeCode.microbit website to code the device.
-13) I coded by using blocks since I didin't have time to learn another coding language.
+13) To enable servos on the microbit's coding website I had to go to extensions and enable servos.
+14) I coded by using blocks since I didin't have time to learn another coding language.
 
 ***Here is an Image of My Code:***
 ![MicrobitCode](Microbit%20Robot%20Project/MicrobitCode.png)
@@ -81,6 +82,25 @@ computer lab. Nonortheless even thought I wouldnt be able to make it I learnt ho
 2. Get multiple crocodile cables.
 3. Plug one side of the cables to the motors cable and the other end of the cables to the crocodile cable.
 4. Clip the crocodile cables to the controller based on the intruductions on the image bellow.
+
+**What I Learned From This Project:**
+1. How to use microbit.
+2. How to connect microbit to servo motors.
+3. How to code for microbit.
+4. How to document better.
+5. How to design better.
+6. How to print an 3D design better.
+7. How to handle cabling for electronics better.
+
+**Notes Etcetras:**
+1. Make sure the cables stay intact.
+2. Make sure to enable servos from extensions before coding to use servos.
+3. Make sure the scaling is correct while printing.
+4. Make sure to descrease filling while printing to save up on plastic usage.
+5. If you're using glue make sure to get as little as you can on the servos.
+6. Make sure the cables are collor coded so things wouldnt get confusing while connecting them.
+7. Make sure the crocodile cables are clipped to the right areas on the microbit controller.
+8. Make sure to check the simulation before sending the code to your microbit controller.
 
 ***Images/Videos:***
 
