@@ -7,7 +7,7 @@
 
 4) I sketched and then extraduted the design to make it 3D.
 5) I added spaces by sketching and the remove extraduting for the areas where the micro motors will go in.
-6) I exported the 3.mf file and sent it to the hisar 3D mail. I printed my design.
+6) I exported the .3mf file and sent it to the hisar 3D mail. I printed my design.
 
 Here is The File and The Image of My Design: 
 [3D Download Of Robot](Microbit%20Robot%20Project/3D%20Download%20Of%20Robot.3mf)
@@ -21,7 +21,7 @@ Micro Servo SG90:
 
 After putting the micros into their holes I noticed that the design I printed would need something to stand upright because it kept falling.
 8) I searched the internet to find a caster wheel sketch that would enable my robot to stand upright.
-9) I found a design I liked and downloaded it in 3.mf format.
+9) I found a design I liked and downloaded it in .3mf format.
 
 Here is The File and The Image of The Caster Wheel:
 [3D Download Of Caster Wheel](Microbit%20Robot%20Project/3D%20Download%20Of%20Caster%20Wheel.3mf)
@@ -42,21 +42,21 @@ Here is The File and The Image of The Caster Wheel:
 Microbit Controller: 
 ![Microbit introductions](Microbit%20Robot%20Project/Microbit%20intruductions.png)
 
-15) I got multiple male to male jumper cables, 1 servo required 3 cables that had 1 of their ends connected to the servos cables and 
+16) I got multiple male to male jumper cables, 1 servo required 3 cables that had 1 of their ends connected to the servos cables and 
 the other end connected to a crocodile cable.
 
 Male to Male Cable: 
 ![m to m cables](Microbit%20Robot%20Project/m%20to%20m%20cables.webp)
 
-16) I connected the crocodile cables to the jumper cables by color since ı colorcoded the jumper cables expecting the wiring to look confusing if ı didn't.
-17) I connected the crocodile cables to the microbit controller.
+17) I connected the crocodile cables to the jumper cables by color since ı colorcoded the jumper cables expecting the wiring to look confusing if ı didn't.
+18) I connected the crocodile cables to the microbit controller.
 
 Crocodile Cable:
 ![croc cables](Microbit%20Robot%20Project/croc%20cables.webp)
 
-18) I downloaded my code to the microbit controller from the website and pressed the buttons of the controller checking if its working or not.
-19) My code, wiring, design was all working perfectly.
-20) I documented my experience.
+19) I downloaded my code to the microbit controller from the website and pressed the buttons of the controller checking if its working or not.
+20) My code, wiring, design was all working perfectly.
+21) I documented my experience.
 
 H.M.: I noticed that the crocodile cables were disconnecting when the robot moved and researched how I could make them not disconnect so my robot wouldnt stop working
 I found out that using a male to crocodile cable was far more effective and that way the wiring wouldnt keep disconnecting, sadly we didn't have those in our
@@ -72,7 +72,7 @@ computer lab. Nonortheless even thought I wouldnt be able to make it I learnt ho
 6. After writing your code press download and ur controller should be working.
 
 
-**Microbit Controller Basics:***
+***Microbit Controller Basics:***
 ![microbit basics](Microbit%20Robot%20Project/microbit%20basics.png)
 
 
