@@ -3,48 +3,55 @@ animal (monkey) shaped.
 2) I opened onshape, logged in and started a new sketch.
 3) I noted down the dimensions of the Micro Servo SG90 as you can see below.
 
-
+![ServoDimensions](Microbit%20Robot%20Project/ServoDimensions.jpg)
 
 
 4) I sketched and then extraduted the desing to make it 3D.
 5) I added spaces by sketching and the remove extraduting for the areas where the micro motors will go in.
 6) I exported the 3.mf file and sent it to the hisar 3D mail. I printed my design.
 
-Here is The File of My Design: 
-
+Here is The File and The Image of My Design: 
+[3D Download Of Robot](Microbit%20Robot%20Project/3D%20Download%20Of%20Robot.3mf)
+![3D Robot](Microbit%20Robot%20Project/3D%20Robot%20.png)
 
 7) I aquired the micro motors from Ms. Senanur and put them in to their holes.
 
 Micro Servo SG90:
-
+![Servo](Microbit%20Robot%20Project/Servo.jpg)
 
 After putting the micros into their holes I noticed that the design I printed would need something to stand upright because it kept falling.
 8) I searched the internet to find a caster wheel sketch that would enable my robot to stand upright.
 9) I found a design I liked and downloaded it in 3.mf format.
 
-Here is The File of The Caster Wheel:
-
+Here is The File and The Image of The Caster Wheel:
+[3D Download Of Caster Wheel](Microbit%20Robot%20Project/3D%20Download%20Of%20Caster%20Wheel.3mf)
+![3D Caster Wheel](Microbit%20Robot%20Project/3D%20Caster%20Wheel.png)
 
 10) I was going to scale the caster wheel but saw that it wasn't needed so ı staright up printed it.
 11) I sticked the caster wheel and my robot together and my robot was standing upright at last.
 12) After my physical work was finished I opened up makeCode.microbit website to code the device.
-13) I coded by using blocks since I didin't have time to learn another coding language. 
-14) I got my microbit controller and attached it to my computer, then I connected it through the website.
+13) I coded by using blocks since I didin't have time to learn another coding language.
+
+***Here is an Image of My Code:***
+![MicrobitCode](Microbit%20Robot%20Project/MicrobitCode.png)
+
+
+15) I got my microbit controller and attached it to my computer, then I connected it through the website.
 
 Microbit Controller: 
-
+![Microbit introductions](Microbit%20Robot%20Project/Microbit%20intruductions.png)
 
 15) I got multiple male to male jumper cables, 1 servo required 3 cables that had 1 of their ends connected to the servos cables and 
 the other end connected to a crocodile cable.
 
 Male to Male Cable: 
-
+![m to m cables](Microbit%20Robot%20Project/m%20to%20m%20cables.webp)
 
 16) I connected the crocodile cables to the jumper cables by color since ı colorcoded the jumper cables expecting the wiring to look confusing if ı didn't.
 17) I connected the crocodile cables to the microbit controller.
 
 Crocodile Cable:
-
+![croc cables](Microbit%20Robot%20Project/croc%20cables.webp)
 
 18) I downloaded my code to the microbit controller from the website and pressed the buttons of the controller checking if its working or not.
 19) My code, wiring, design was all working perfectly.
@@ -65,7 +72,7 @@ computer lab. Nonortheless even thought I wouldnt be able to make it I learnt ho
 
 
 **Microbit Controller Basics:***
-
+![microbit basics](Microbit%20Robot%20Project/microbit%20basics.png)
 
 
 
@@ -75,10 +82,7 @@ computer lab. Nonortheless even thought I wouldnt be able to make it I learnt ho
 3. Plug one side of the cables to the motors cable and the other end of the cables to the crocodile cable.
 4. Clip the crocodile cables to the controller based on the intruductions on the image bellow.
 
+***Images/Videos:***
 
-
-
-
-
-
-
+[robot.mov](Microbit%20Robot%20Project/robot.mov)
+![Robot](Microbit%20Robot%20Project/Robot.HEIC)
