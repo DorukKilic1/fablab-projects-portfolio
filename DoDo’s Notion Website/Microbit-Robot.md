@@ -49,12 +49,14 @@ Microbit Controller:
 the other end connected to a crocodile cable.
 
 Male to Male Cable: 
+
 ![m to m cables](Microbit%20Robot%20Project/m%20to%20m%20cables.webp)
 
 17) I connected the crocodile cables to the jumper cables by color since i colorcoded the jumper cables expecting the wiring to look confusing if i didn't.
 18) I connected the crocodile cables to the microbit controller.
 
 Crocodile Cable:
+
 ![croc cables](Microbit%20Robot%20Project/croc%20cables.webp)
 
 19) I downloaded my code to the microbit controller from the website and pressed the buttons of the controller checking if its working or not.
