@@ -12,9 +12,10 @@
 5) I added spaces by sketching and the remove extruding for the areas where the micro motors will go in.
 6) I exported the .3mf file and sent it to the hisar 3D mail. I printed my design.
 
-Here is The File and The Image of My Design: 
+Here is The File, Image and The Link of My Design: 
 [3D Download Of Robot](Microbit%20Robot%20Project/3D%20Download%20Of%20Robot.3mf)
 ![3D Robot](Microbit%20Robot%20Project/3D%20Robot%20.png)
+https://cad.onshape.com/documents/ca0e1870c23aa68765657c5d/w/1bf368c52e6d1db3fd694b2d/e/d55948d268a59e24da9c8c33?renderMode=0&uiState=69cb8ff0cf5a676d640e8bbc 
 
 7) I acquired the micro motors from Ms. Senanur and put them into their holes.
 
