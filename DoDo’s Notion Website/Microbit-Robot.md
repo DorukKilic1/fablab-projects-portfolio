@@ -87,6 +87,7 @@ computer lab. Nonetheless even though I wouldn't be able to make it I learnt how
 2. Get multiple crocodile cables.
 3. Plug one side of the cables to the motors cable and the other end of the cables to the crocodile cable.
 4. Clip the crocodile cables to the controller based on the instructions on the image below.
+![Microbit introductions](Microbit%20Robot%20Project/Microbit%20intruductions.png)
 
 **What I Learned From This Project:**
 1. How to use microbit.
