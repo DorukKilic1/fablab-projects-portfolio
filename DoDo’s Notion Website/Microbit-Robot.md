@@ -110,7 +110,7 @@ computer lab. Nonetheless even though I wouldn't be able to make it I learnt how
 7. Make sure the crocodile cables are clipped to the right areas on the microbit controller.
 8. Make sure to check the simulation before sending the code to your microbit controller.
 
-***Images/Videos:***
+***Images/Videos:***  
 
 [robot.mov](Microbit%20Robot%20Project/robot.mov)
 ![Robot](Microbit%20Robot%20Project/Robot.HEIC)
