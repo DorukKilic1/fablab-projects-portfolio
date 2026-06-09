@@ -142,8 +142,6 @@ ScreenShot on Onshape
 
 ## Car Project:
 
-# Lemon
-
 ## **Lemon Fish Project**
 
 1. I got the drawing of the fish from Emre.
