@@ -140,7 +140,7 @@ ScreenShot on Onshape
 
 ***ScreenShot of Design***
 
-## **Lemon Fish Project**
+## **Lemon Fish Project:**
 
 1. I got the drawing of the fish from Emre.
 2. The drawing isn’t enough so i had to use a ruler and measure the lengths and the heights of the fish parts.
