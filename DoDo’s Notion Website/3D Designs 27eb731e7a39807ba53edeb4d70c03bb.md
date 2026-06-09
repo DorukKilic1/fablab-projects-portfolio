@@ -148,7 +148,7 @@ ScreenShot on Onshape
 2. The drawing isn’t enough so i had to use a ruler and measure the lengths and the heights of the fish parts.
 3. After measuring i changed the document I got from Emre to an png and downloaded it to Onshape.
     
-    [Copy of lime son comp (1).ai](3D Designs/Copy_of_lime_son_comp_(1).ai)
+    [Copy of lime son comp (1).ai](3D%20Designs/Copy_of_lime_son_comp_(1).ai)
     
 4. After downloading the document to Onshape I opened a new document and inserted the png to the document.
 5. I renamed the document Lemon Fish Project and started sketching on the top lane.
@@ -166,9 +166,9 @@ Here are the attachments:
 
 [Lemon Fish Project Onshape](https://cad.onshape.com/documents/a4d269636272a0114b9d8d56/w/07776243a2c53176185dd7c7/e/d81a157bf7419143375b6744?renderMode=0&uiState=6967559cbe5b1bf69df68710) 
 
-[Part Studio 1.3mf](3D Designs/Part_Studio_1_Lemon.3mf)
+[Part Studio 1.3mf](3D%20Designs/Part_Studio_1_Lemon.3mf)
 
-<img src="3D Designs/a782ce55-d9cd-46cd-bf63-c0a809438888.png" width="300">
+<img src="3D%20Designs/a782ce55-d9cd-46cd-bf63-c0a809438888.png" width="300">
 
 ***ScreenShot of Design***
 
@@ -178,11 +178,11 @@ Here are the attachments:
 4. It generated a 2D drawing for me and I had to put an scale model and then my design. For it to be less confusing I deleted everything else other then my design and exported it the same way I exported a design for 3D but this time I picked SVG format since it was the most compatible with our tool.
     
     
-    <img src="3D Designs/bd1301cc-2bde-471c-a132-e88e5c172744.png" width="300">
+    <img src="3D%20Designs/bd1301cc-2bde-471c-a132-e88e5c172744.png" width="300">
     
     ***Creating Drawing***
     
-    <img src="3D Designs/Screenshot_2026-01-29_at_00.24.57.png" width="300">
+    <img src="3D%20Designs/Screenshot_2026-01-29_at_00.24.57.png" width="300">
     
     ***Exporting***
     
@@ -191,24 +191,24 @@ Here are the attachments:
 7. This made sure that all of the parts had the dimensions that we wanted meaning the same as the finished product I measured from. Also it is important to mention that using the measure tool on the xToolP3 app is very helpful while making sure the dimensions are what we want.
 8. I prepared the laserCutter by measuring the material, putting it inside the machine and strapping it, opening the ventilation machine so while printing it wouldn't smell horrible and cleaning the circles inside the machine so it could scan the material. After that I opened and closed the lid of the machine until it scanned the material.
 
-<img src="3D Designs/03E55CE2-2684-4866-8C57-E18DF6F35B8D_1_105_c.jpeg" width="300">
+<img src="3D%20Designs/03E55CE2-2684-4866-8C57-E18DF6F35B8D_1_105_c.jpeg" width="300">
 
 ***Ventilator***
 
-<img src="3D Designs/9E9AF700-6AAA-49F8-9073-D24F584822EB_1_105_c.jpeg" width="300">
+<img src="3D%20Designs/9E9AF700-6AAA-49F8-9073-D24F584822EB_1_105_c.jpeg" width="300">
 
 ***Material***
 
 1. Since I measured the material it was easy for me to pick the cutting settings (Power and Speed) because it had saved options for multiple materials, I just had to find and select my material according to my measurement and pick how I wanted my cutting to look that automatically set the settings according to it.
 2. After that I pressed continue and the start button on the machine.
 
-<img src="3D Designs/1E4A2FE3-47F7-43E8-BCCA-113F26FF6604_1_105_c.jpeg" width="300">
+<img src="3D%20Designs/1E4A2FE3-47F7-43E8-BCCA-113F26FF6604_1_105_c.jpeg" width="300">
 
 ***xToolP3 App***
 
 1. It started printing but something went wrong and the machine only engraved it. I tried again and this time the machine burned it. Turns out the machine was broken.
 
-<img src="3D Designs/C1E55E98-0F09-4774-A643-765098EA8807_1_201_a.heic" width="300">
+<img src="3D%20Designs/C1E55E98-0F09-4774-A643-765098EA8807_1_201_a.heic" width="300">
 
 ***xToolP3 Working***
 
@@ -216,7 +216,7 @@ Here are the attachments:
 2. I thought if the machines speed and power settings were broken I could find new working values for both cutting and engraving by printing little shapes on different speed and Power settings. After multiple attempts I finally figured out the correct values of them and noted the values on a post-it for others to use. 
 3. After that I printed my design again and this time it worked. I removed the material and collected my prints carefully so they wouldn't break.
 
-<img src="3D Designs/0149a799-972e-4970-a2f3-6e81cd7ca1a7.png" width="300">
+<img src="3D%20Designs/0149a799-972e-4970-a2f3-6e81cd7ca1a7.png" width="300">
 
 ***Collecting the Printed Parts***
 
@@ -234,36 +234,36 @@ Here are the attachments:
 
 1. Now I am going to start building the fish with the parts based on the instructions on the Lemon building handbook. Also there is a website for help/how to Lemon made by the people in the Faplab but sadly it didn't help much because the videos were not found. 
 
-<img src="3D Designs/Screenshot_2026-02-03_at_14.20.35.png" width="300">
+<img src="3D%20Designs/Screenshot_2026-02-03_at_14.20.35.png" width="300">
 
 ***The Error***
 
 1. I’ve started building the robot at the lab but it took longer then I expected so I gathered the items I required and took them home with the permission from the teacher. I heard that the biggest issue that could happen was the wood not bending for the head part but fortunately that did not happen and everything went perfectly.
 
-<img src="3D Designs/WhatsApp_Image_2026-01-30_at_15.50.20.jpeg" width="300">
+<img src="3D%20Designs/WhatsApp_Image_2026-01-30_at_15.50.20.jpeg" width="300">
 
 ***The progress I obtained at my house***
 
 1. I finished building the robot the next day at the lab. Additionally I colored it and added some physical features for personalization. The only thing left for me now is to test if it works which I will do tomorrow. 
 
-<img src="3D Designs/IMG_2383.jpeg" width="300">
+<img src="3D%20Designs/IMG_2383.jpeg" width="300">
 
 ***Photo of the Lemon fish before personalization***
 
-<img src="3D Designs/IMG_2384.jpeg" width="300">
+<img src="3D%20Designs/IMG_2384.jpeg" width="300">
 
 ***Photo of the Lemon fish after personalization.”***
 
 1. I checked out the introductions on the website because the handbook was being used. I read everything after assembling the Lemon parts meaning the Pico parts.
 2. This was my first time using Pico, I got the Pico, Pico to computer cable and some other normal cables to connect the Lemon to the Pico from Senanur.
 
-<img src="3D Designs/IMG_2502.jpeg" width="300">
+<img src="3D%20Designs/IMG_2502.jpeg" width="300">
 
 ***Irmak Sharing All The Files I Need***
 
 1. After that Irmak shared all the files I need. She didn’t have the code for the Pico but I learned how to write the code for it on the handbook/GitHub page.
 
-<img src="3D Designs/photo.png" width="300">
+<img src="3D%20Designs/photo.png" width="300">
 
 ***How To Connect The Cables***
 
@@ -275,11 +275,11 @@ Here are the attachments:
 6. The motors were working as they should, after that I recolored my Lemon with Irmak.
 7. After a lot of work and efforts my Lemon project was finally finished and with everything working successfully.
 
-<img src="3D Designs/CheckingMotors.jpeg" width="300">
+<img src="3D%20Designs/CheckingMotors.jpeg" width="300">
 
 ***Irmak Approving My Lemon*** 
 
-<img src="3D Designs/FinishedLemon.jpeg" width="300">
+<img src="3D%20Designs/FinishedLemon.jpeg" width="300">
 
 ***Re-coloring the Lemon with Irmak***
 
