@@ -28,10 +28,6 @@ My hobbies include:
 
 [3D Designs](DoDo%E2%80%99s%20Notion%20Website/3D%20Designs%2027eb731e7a39807ba53edeb4d70c03bb.md)
 
-# Lemon Fish Project:
-
-[Lemon](DoDo%E2%80%99s%20Notion%20Website/Lemon%2027eb731e7a3980b6850fdde2b5b39f38.md)
-
 # Lemon DoDo Project:
 
 [Lemon DoDo](DoDo%E2%80%99s%20Notion%20Website/Lemon%20DoDo%202fcb731e7a39808696f3c84584c7faf3.md)
