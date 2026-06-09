@@ -44,3 +44,7 @@ My hobbies include:
 
 [Microbit Robot](DoDo%E2%80%99s%20Notion%20Website/Microbit-Robot.md)
 
+# JavaFX Project:
+
+[JavaFX Project](DoDo’s%20Notion%20Website/JavaFX%20Project.md)
+
