@@ -47,4 +47,3 @@ My hobbies include:
 # JavaFX Project:
 
 [JavaFX Project](DoDo’s%20Notion%20Website/JavaFX%20Project.md)
-
