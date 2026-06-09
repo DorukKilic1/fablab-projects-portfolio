@@ -208,7 +208,7 @@ Here are the attachments:
 
 1. It started printing but something went wrong and the machine only engraved it. I tried again and this time the machine burned it. Turns out the machine was broken.
 
-<img src="3D%20Designs/C1E55E98-0F09-4774-A643-765098EA8807_1_201_a.heic" width="300">
+<img src="3D%20Designs/C1E55E98-0F09-4774-A643-765098EA8807_1_201_a.jpg" width="300">
 
 ***xToolP3 Working***
 
