@@ -1,19 +1,42 @@
 ### The assignment: 
-Create an ***Applet*** that uses ***javaFX***, ***Regex Patterns*** and secured by ***Cryptography***.
+Create an ***Applet*** that uses ***JavaFX***, ***Regex Patterns*** and secured by ***Cryptography***.
 
-1) I brainstormed ideas and decided to create a P2P (Peer-To-Peer) encrypted messenger, meaning two users communicate directly with no server in between and every message is scrambled before it leaves the sender's machine.
-2) I downloaded the JavaFX SDK and set up Visual Studio Code to work with JavaFX by configuring the module path in the run settings.
-3) I planned the application layout on paper: a setup section (name, port, peer IP, password), a decrypted chat area, an encrypted traffic area that shows the raw packets, and a message input row at the bottom.
-4) I built the UI in JavaFX using `GridPane` for the setup fields, `VBox` as the root container, `HBox` rows for buttons and the message input, and two `TextArea` boxes for the chat and encrypted traffic areas.
-5) I added three connection buttons: "Enter As Peer" (opens a server socket and waits for the other user to connect), "Connect To Peer" (connects directly to the peer's IP and port), and "Terminate Connection" (closes the socket and resets the UI).
-6) I implemented input validation using `Pattern` (Regex) to make sure names are 3–15 letters, ports are in the valid 1024–65535 range, IP addresses follow the correct format, and messages only contain allowed characters.
-7) I implemented PBKDF2 (`PBEKeySpec` + `SecretKeyFactory`) to convert the shared password into a 128-bit AES key using HMAC-SHA256 over 65,536 rounds with a fixed salt — this way both users derive the exact same key from the same password without ever sending the key over the network.
-8) I implemented AES/GCM encryption: before sending, a random 12-byte IV is generated with `SecureRandom`, the message is encrypted with `AES/GCM/NoPadding` using a 128-bit authentication tag, and the result is sent as `Base64(IV):Base64(Ciphertext)` over the socket.
-9) I implemented decryption on the receiver side: the packet is split at `:` to recover the IV and ciphertext, both are decoded from Base64, and `AES/GCM` decrypts while automatically verifying the authentication tag — if the data was tampered with it throws an error and shows a warning instead of displaying the message.
-10) I used `Platform.runLater()` everywhere that background network threads needed to update the UI, since JavaFX only allows UI changes from the JavaFX Application Thread.
-11) I created a `style.css` file and loaded it into the scene to style all controls (dark background, red borders, custom button and alert colours) keeping the visual design consistent.
-12) I ran both sides of the application on my own machine (using `localhost` and two separate terminal windows) to confirm the encryption, decryption, and tamper detection all worked correctly.
-13) I documented my project and created a project poster (see link below).
+1) I brainstormed project ideas and eventually decided to on a messenger applet.
+2) I discussed my idea with emre and he mentioned something called **P2P**.
+
+***P2P:*** (Short for **Peer To Peer**) is a way to connect multiple people directly over a network instead of needing a client or a server.
+  
+4) I downloaded the **JavaFX** libary and set up Visual Studio Code. Downloading the **JavaFX** libary enables using prewritten methods of **JavaFX**.
+5) I gave a very detailed prompt on what i wanted the code to use, how it should look and function to claude code.
+6) After the prototype was built I checked what each line does and commented on each line what it does.
+7) I set up the **Regex Patterns** manually and added methods for **Regex** validation.
+
+***Regex:*** (Short for **Regular Expression**) is a way to define what a valid value should be. It is very useful because instead of checking each value manually for every condition, you can write a **Regex Pattern** once and use that to validate automatically.
+
+8) I researched what **Cryptography** was and found out it is a way to protect data and people.
+
+***Cryptography:*** is a way to protect data while transmitting it through the internet. It does this by **Encrypting** (Scrambling) data to an unreadable format called **CipherText**. The **CipherText** can only be converted back to the original data by **Decrypting** it with a key. Without the key the **Encrypted** data is useless.
+
+9) I checked the code thoroughly and saw:
+- Repeated Lines
+- Unnecessary Lines
+- Lines That Could Be Simplified
+- Illogical Lines
+
+  That the AI made. I fixed the code by rewriting the lines. Some were deleted, some were changed and some were merged. his improved the efficiency of my code and increased my coding skills.
+
+
+!!YOU LEFT HERE DUDE!!
+
+
+10) I implemented input validation using `Pattern` (Regex) to make sure names are 3–15 letters, ports are in the valid 1024–65535 range, IP addresses follow the correct format, and messages only contain allowed characters.
+11) I implemented PBKDF2 (`PBEKeySpec` + `SecretKeyFactory`) to convert the shared password into a 128-bit AES key using HMAC-SHA256 over 65,536 rounds with a fixed salt — this way both users derive the exact same key from the same password without ever sending the key over the network.
+12) I implemented AES/GCM encryption: before sending, a random 12-byte IV is generated with `SecureRandom`, the message is encrypted with `AES/GCM/NoPadding` using a 128-bit authentication tag, and the result is sent as `Base64(IV):Base64(Ciphertext)` over the socket.
+13) I implemented decryption on the receiver side: the packet is split at `:` to recover the IV and ciphertext, both are decoded from Base64, and `AES/GCM` decrypts while automatically verifying the authentication tag — if the data was tampered with it throws an error and shows a warning instead of displaying the message.
+14) I used `Platform.runLater()` everywhere that background network threads needed to update the UI, since JavaFX only allows UI changes from the JavaFX Application Thread.
+15) I created a `style.css` file and loaded it into the scene to style all controls (dark background, red borders, custom button and alert colours) keeping the visual design consistent.
+16) I ran both sides of the application on my own machine (using `localhost` and two separate terminal windows) to confirm the encryption, decryption, and tamper detection all worked correctly.
+17) I documented my project and created a project poster (see link below).
 
 <a href="JavaFX Project/JavaFX Projectfin.html" target="_blank">**Poster**</a>
 
