@@ -19,9 +19,9 @@
 
 **Code Files:**
 
-[App.java](JavaFX%20Project/App.java)
+<a href="JavaFX Project/App.java" target="_blank">App.java</a>
 
-[style.css](JavaFX%20Project/style.css)
+<a href="JavaFX Project/style.css" target="_blank">style.css</a>
 
 
 **How The Application Works Step By Step:**
