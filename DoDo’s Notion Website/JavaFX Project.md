@@ -1,5 +1,5 @@
-***The assignment:***
-"Create a peer-to-peer chat application that encrypts all messages end-to-end using JavaFX for the user interface, TCP sockets for the direct connection, and AES encryption for security, then document the project".
+**The assignment:**
+"Create a applet that uses javaFX, regex patterns, ".
 
 1) I brainstormed ideas and decided to create a P2P (Peer-To-Peer) encrypted messenger, meaning two users communicate directly with no server in between and every message is scrambled before it leaves the sender's machine.
 2) I downloaded the JavaFX SDK and set up Visual Studio Code to work with JavaFX by configuring the module path in the run settings.
@@ -15,9 +15,9 @@
 12) I ran both sides of the application on my own machine (using `localhost` and two separate terminal windows) to confirm the encryption, decryption, and tamper detection all worked correctly.
 13) I documented my project and created a project poster (see link below).
 
-<a href="JavaFX%20Project/JavaFX%20Projectfin.html" target="_blank">View Project Poster (Opens In New Tab)</a>
+<a href="JavaFX%20Project/JavaFX%20Projectfin.html" target="_blank"> Project's Poster</a>
 
-Here Are The Source Code Files:
+**Here Are The Code Files:**
 
 [App.java](JavaFX%20Project/App.java)
 
