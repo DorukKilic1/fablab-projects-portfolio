@@ -17,11 +17,9 @@
 
 <a href="JavaFX Project/JavaFX Projectfin.html" target="_blank">**Poster**</a>
 
-**Code Files:**
+<a href="JavaFX Project/App.java" target="_blank">The Code</a>
 
-<a href="JavaFX Project/App.java" target="_blank">App.java</a>
-
-<a href="JavaFX Project/style.css" target="_blank">style.css</a>
+<a href="JavaFX Project/style.css" target="_blank">The Css File</a>
 
 
 **How The Application Works Step By Step:**
