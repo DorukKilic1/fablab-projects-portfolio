@@ -1,5 +1,5 @@
-## The assignment: 
-- Create an ***Applet*** that uses ***javaFX***, ***Regex Patterns*** and secured by ***Cryptography***.
+### The assignment: 
+Create an ***Applet*** that uses ***javaFX***, ***Regex Patterns*** and secured by ***Cryptography***.
 
 1) I brainstormed ideas and decided to create a P2P (Peer-To-Peer) encrypted messenger, meaning two users communicate directly with no server in between and every message is scrambled before it leaves the sender's machine.
 2) I downloaded the JavaFX SDK and set up Visual Studio Code to work with JavaFX by configuring the module path in the run settings.
