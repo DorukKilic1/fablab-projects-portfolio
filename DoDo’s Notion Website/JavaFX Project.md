@@ -15,8 +15,7 @@
 12) I ran both sides of the application on my own machine (using `localhost` and two separate terminal windows) to confirm the encryption, decryption, and tamper detection all worked correctly.
 13) I documented my project and created a project poster (see link below).
 
-**Poster:**
-<a href="JavaFX%20Project/JavaFX%20Projectfin.html" target="_blank"></a>
+<a href="JavaFX Project/JavaFX Projectfin.html" target="_blank">**Poster**</a>
 
 **Code Files:**
 
