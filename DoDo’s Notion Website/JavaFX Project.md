@@ -1,4 +1,4 @@
-# The assignment: 
+## The assignment: 
 Create an ***Applet*** that uses ***javaFX***, ***Regex Patterns*** and secured by ***Cryptography***.
 
 1) I brainstormed ideas and decided to create a P2P (Peer-To-Peer) encrypted messenger, meaning two users communicate directly with no server in between and every message is scrambled before it leaves the sender's machine.
